@@ -3,3 +3,4 @@
 export(Test)
 import(Claddis)
 import(ape)
+import(deldir)

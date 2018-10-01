@@ -22,4 +22,5 @@
 #'
 #' @import ape
 #' @import Claddis
+#' @import deldir
 NULL

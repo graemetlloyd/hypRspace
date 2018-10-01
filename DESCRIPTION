@@ -1,10 +1,11 @@
-Package: dispeRse
-Title: Models For Paleobiogeography
+Package: hypRspace
+Title: Biological Hyperspace Functions
 Version: 0.0.1
-Author: Laura C. Soul and Graeme T. Lloyd
+Author: Graeme T. Lloyd
 Maintainer: Graeme T. Lloyd <graemetlloyd@gmail.com>
-Description: Functions for simulating and modelling phylogenetic patterns of paleobiogeography.
-Depends: ape,Claddis,geiger,R (>= 3.1.3)
+Description: Functions for dealing with biological hyperspaces.
+Depends: ape,Claddis,R (>= 3.5.1)
 License: GPL (>=2)
 LazyData: true
 ByteCompile: yes
+RoxygenNote: 6.0.1

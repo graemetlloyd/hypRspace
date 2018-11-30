@@ -8,4 +8,4 @@ Depends: ape,Claddis,deldir,R (>= 3.5.1)
 License: GPL (>=2)
 LazyData: true
 ByteCompile: yes
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

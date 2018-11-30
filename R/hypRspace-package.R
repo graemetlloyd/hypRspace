@@ -23,4 +23,5 @@
 #' @import ape
 #' @import Claddis
 #' @import deldir
+#' @import viridis
 NULL

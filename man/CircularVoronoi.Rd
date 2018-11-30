@@ -4,7 +4,7 @@
 \alias{CircularVoronoi}
 \title{Circular Voronoi Plot}
 \usage{
-CircularVoronoi(x, y, heat, EdgeFactor = 1.1)
+CircularVoronoi(x, y, heat, EdgeFactor = 1.1, NColours = 100)
 }
 \arguments{
 \item{x}{The x coordinates of the points to plot.}
@@ -14,6 +14,8 @@ CircularVoronoi(x, y, heat, EdgeFactor = 1.1)
 \item{heat}{Numerical values that will determine the colour of each tile plotted (i.e., as a heat map).}
 
 \item{EdgeFactor}{The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10% to the dimatere of the point cloud).}
+
+\item{NColours}{The number of (possible) colours to use in plotting (default is 100).}
 }
 \value{
 A circular Voronoi plot with tiles coloured according to heat values.
@@ -41,4 +43,4 @@ CircularVoronoi(x, y, heat, EdgeFactor = 1.05)
 \author{
 Graeme T. Lloyd \email{graemetlloyd@gmail.com}
 }
-\keyword{ancestor}
+\keyword{Voronoi}

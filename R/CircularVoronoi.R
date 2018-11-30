@@ -8,12 +8,13 @@
 #' @param y The y coordinates of the points to plot.
 #' @param heat Numerical values that will determine the colour of each tile plotted (i.e., as a heat map).
 #' @param EdgeFactor The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10% to the dimatere of the point cloud).
+#' @param NColours The number of (possible) colours to use in plotting (default is 100).
 #'
 #' @return A circular Voronoi plot with tiles coloured according to heat values.
 #'
 #' @author Graeme T. Lloyd \email{graemetlloyd@@gmail.com}
 #'
-#' @keywords ancestor
+#' @keywords Voronoi
 #'
 #' @examples
 #'
@@ -28,8 +29,8 @@
 #' # Create treespace tile plot:
 #' CircularVoronoi(x, y, heat, EdgeFactor = 1.05)
 #'
-#' @export Test
-CircularVoronoi <- function(x, y, heat, EdgeFactor = 1.1) {
+#' @export CircularVoronoi
+CircularVoronoi <- function(x, y, heat, EdgeFactor = 1.1, NColours = 100) {
   
   # ADD HEATMAP LEGEND
   # ADD COLOUR PALETTE OPTIONS
@@ -55,10 +56,14 @@ CircularVoronoi <- function(x, y, heat, EdgeFactor = 1.1) {
   # Generate plot radius from maximum distance from origin multiplied by some edge factor:
   PlotRadius <- EdgeFactor * MaxDistanceFromOrigin
   
-  # Set plot colours using viridis library (probably want to add optiosn for this later):
-  PlotColours <- viridis::magma(n = N, begin = min(heat), end = max(heat))
+  # Place heat values on a zero to one scale:
+  RescaledHeat <- (heat - min(heat)) / max(heat - min(heat))
   
+  # Set plot colour palette using viridis library (probably want to add options for this later):
+  PlotColourPalette <- viridis::magma(n = NColours, begin = min(heat), end = max(heat))
   
+  # Set plot colours by matching heat values to colour palette:
+  PlotColours <- unlist(lapply(as.list(RescaledHeat), function(x) PlotColourPalette[max(which(x >= seq(from = 0, to = 1, length.out = NColours)))]))
   
   for(i in sort(c(which(DelaunayForVoronoi[, "bp1"]), which(DelaunayForVoronoi[, "bp2"])))) {
     

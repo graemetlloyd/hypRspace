@@ -24,9 +24,12 @@ GetNTrees <- function(N) {
   # N any furcation
   # N possible partitions
   # N unique tree shapes (unlabelled trees)
+  # N with ancestors (See Felsenstein paper)
+  # Actually generate trees
+  # Can possibly calculate iteratively by adding n + 1 species to existing answer(s)
   
   # Function to calculate total number of (labelled) bipartitions for N taxa (excludes root and tips, i.e., m = 1 or m = N):
-  NBipartitions <- function(N) return(sum(unlist(lapply(lapply(as.list((N - 1):2), function(x) combn(x = N, m = x)), ncol))))
+  NBipartitions <- function(N) return(sum(unlist(lapply(lapply(as.list((N - 1):2), function(x) utils::combn(x = N, m = x)), ncol))))
   
   
   
@@ -36,7 +39,7 @@ GetNTrees <- function(N) {
   return(NBipartitions)
   
   # EXACT VERSUS ESTIMATED IN OUTPUT
-  # DO NOT REALLY NEED TO CLALCULATE AS CAN JUST HAVE A TABLE FOR ALL DIRECTLY ESTIMABLE VALUES
+  # DO NOT REALLY NEED TO CALCULATE AS CAN JUST HAVE A TABLE FOR ALL DIRECTLY ESTIMABLE VALUES
 
 # Estimate as best as possible for larger numbers (e.g., to nearest 10 ^ N). (Also, work out at which level regular ones fail.)
 

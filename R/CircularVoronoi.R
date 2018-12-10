@@ -214,12 +214,13 @@ CircularVoronoi <- function(x, y, heat, EdgeFactor = 1.1, NColours = 100) {
     
   }
   
-  par(mar = rep(0, 4))
+  # Set up naked plot without axes:
+  graphics::par(mar = rep(0, 4))
   
   # Create empty plot:
-  plot(x = x, y = y, type = "n", xlim = c(-PlotRadius, PlotRadius), ylim = c(-PlotRadius, PlotRadius), asp = 1, axes = FALSE, xlab = "", ylab = "")
+  graphics::plot(x = x, y = y, type = "n", xlim = c(-PlotRadius, PlotRadius), ylim = c(-PlotRadius, PlotRadius), asp = 1, axes = FALSE, xlab = "", ylab = "")
   
   # Add polygons coloured by heat values:
-  Empty <- lapply(PolygonsList, function(x) polygon(x = x$PolygonCoordinates[, 1], y = x$PolygonCoordinates[, 2], col = x$PlotColour, border = 0))
+  Empty <- lapply(PolygonsList, function(x) graphics::polygon(x = x$PolygonCoordinates[, 1], y = x$PolygonCoordinates[, 2], col = x$PlotColour, border = 0))
   
 }

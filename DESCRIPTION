@@ -4,7 +4,8 @@ Version: 0.0.1
 Author: Graeme T. Lloyd
 Maintainer: Graeme T. Lloyd <graemetlloyd@gmail.com>
 Description: Functions for dealing with biological hyperspaces.
-Depends: ape,Claddis,deldir,viridis,R (>= 3.5.1)
+Depends: ape,Claddis,deldir,R (>= 3.5)
+Imports: viridis
 License: GPL (>=2)
 LazyData: true
 ByteCompile: yes

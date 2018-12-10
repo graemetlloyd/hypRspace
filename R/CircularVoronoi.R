@@ -7,7 +7,7 @@
 #' @param x The x coordinates of the points to plot.
 #' @param y The y coordinates of the points to plot.
 #' @param heat Numerical values that will determine the colour of each tile plotted (i.e., as a heat map).
-#' @param EdgeFactor The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10% to the dimatere of the point cloud).
+#' @param EdgeFactor The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10\% to the diameter of the point cloud).
 #' @param NColours The number of (possible) colours to use in plotting (default is 100).
 #'
 #' @return A circular Voronoi plot with tiles coloured according to heat values.
@@ -184,7 +184,7 @@ CircularVoronoi <- function(x, y, heat, EdgeFactor = 1.1, NColours = 100) {
     }
     
     # Place polygon points in "order", i.e., using a convex hull:
-    convexhullpoints <- chull(x = polygonpoints[, 1], y = polygonpoints[, 2])
+    convexhullpoints <- grDevices::chull(x = polygonpoints[, 1], y = polygonpoints[, 2])
     
     # Set order of polygon points using convex hull:
     polygonpoints <- polygonpoints[convexhullpoints, ]

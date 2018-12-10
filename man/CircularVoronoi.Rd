@@ -13,7 +13,7 @@ CircularVoronoi(x, y, heat, EdgeFactor = 1.1, NColours = 100)
 
 \item{heat}{Numerical values that will determine the colour of each tile plotted (i.e., as a heat map).}
 
-\item{EdgeFactor}{The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10% to the dimatere of the point cloud).}
+\item{EdgeFactor}{The proportional extension of the edge of the plotting circle (i.e., the default of 1.1 adds 10\% to the diameter of the point cloud).}
 
 \item{NColours}{The number of (possible) colours to use in plotting (default is 100).}
 }

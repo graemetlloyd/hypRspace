@@ -2,6 +2,7 @@
 
 export(CircularVoronoi)
 export(GetNTrees)
+export(HypersphereArea)
 import(Claddis)
 import(ape)
 import(deldir)

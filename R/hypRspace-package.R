@@ -23,4 +23,9 @@
 #' @import ape
 #' @import Claddis
 #' @import deldir
+#' @importFrom utils combn
+NULL
+
+# @import strap
+# @importFrom strap FindDescendants
 NULL

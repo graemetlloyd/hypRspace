@@ -21,7 +21,7 @@
 #' @export HypersphereArea
 HypersphereArea <- function(Radius, NDimensions) {
   
-  # Subfunction to calculate the double factorial (peel off into own funtion maybe?):
+  # Subfunction to calculate the double factorial (peel off into own function maybe?):
   DoubleFactorial <- function(N) {
     
     # If N is -1 return 1:
@@ -56,6 +56,9 @@ HypersphereArea <- function(Radius, NDimensions) {
     S_n <- (2 * (pi ^ (NDimensions / 2))) / factorial((0.5 * NDimensions) - 1)
 
   }
+  
+  # Special case if only one dimension:
+  if(NDimensions == 1) S_n <- 2
   
   # Return area scaled by radius to power of N dimensions minus one:
   return(S_n * (Radius ^ (NDimensions - 1)))

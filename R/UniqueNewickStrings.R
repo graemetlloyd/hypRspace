@@ -1,6 +1,6 @@
 #' Get Unique Newick Strings
 #'
-#' Takes as input a vector of labelled newick strings and reqturns only those pertaining to unique trees.
+#' Takes as input a vector of labelled Newick strings and returns only those pertaining to unique trees.
 #'
 #' Principle of free rotation.
 #'

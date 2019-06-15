@@ -60,4 +60,4 @@ GetNLabelledMultifurcatingRootedTrees <- function(N) {
 }
 
 # Make plot of all total tree solutions that can be directly calculated:
-#plot(1:145, unlist(lapply(as.list(1:145), function(x) GetNTrees(x)$TotalTrees)), xlab = "Leaf count", ylab = "Tree count", log = "y", type = "l")
+#plot(1:145, unlist(lapply(as.list(1:145), function(x) GetNLabelledMultifurcatingRootedTrees(x)$TotalTrees)), xlab = "Leaf count", ylab = "Tree count", log = "y", type = "l")

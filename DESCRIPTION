@@ -9,4 +9,4 @@ Imports: partitions,strap,viridis
 License: GPL (>=2)
 LazyData: true
 ByteCompile: yes
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0

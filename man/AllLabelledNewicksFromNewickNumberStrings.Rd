@@ -4,8 +4,10 @@
 \alias{AllLabelledNewicksFromNewickNumberStrings}
 \title{Generate All Labelled Newicks from Newick Number Strings}
 \usage{
-AllLabelledNewicksFromNewickNumberStrings(NewickNumberStrings,
-  TipLabels = NULL)
+AllLabelledNewicksFromNewickNumberStrings(
+  NewickNumberStrings,
+  TipLabels = NULL
+)
 }
 \arguments{
 \item{NewickNumberStrings}{A vector of Newick number strings.}

@@ -72,7 +72,7 @@ UniqueNewickNumberStrings <- function(NewickNumberStrings) {
       Tree$root.time <- max(diag(ape::vcv(Tree)))
       
       # Get node ages:
-      NodeAges <- unname(Claddis::GetNodeAges(Tree))
+      NodeAges <- unname(Claddis::date_nodes(Tree))
       
       # Return sorted string of tip ages and splits with appended node ages:
       return(paste(paste(sort(NodeAges[1:ape::Ntip(Tree)]), collapse = "%%"), paste(sort(paste(NodeAges[InternalNodeNumbers], unlist(lapply(as.list(InternalNodeNumbers), function(x) paste(Tree$tip.label[strap::FindDescendants(n = x, tree = Tree)], collapse = ""))), sep = "")), collapse = "%%"), sep = ""))
